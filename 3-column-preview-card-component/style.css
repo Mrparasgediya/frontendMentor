@@ -1,0 +1,108 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --orange-light: hsl(31, 77%, 52%);
+  --cayan: hsl(184, 100%, 22%);
+  --cayan-dark: hsl(179, 100%, 13%);
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+  --gray-light: hsl(0, 0%, 95%);
+  --font-family-heading: "Big Shoulders Display", cursive;
+  --font-family-body: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: var(--font-family-body);
+}
+
+.container {
+  width: 75%;
+  min-height: 55rem;
+  margin: 20rem auto 0;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.car__container {
+  flex: 1;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  min-width: 30rem;
+}
+
+.car__container--orange {
+  background-color: var(--orange-light);
+}
+.car__container--cayan {
+  background-color: var(--cayan);
+}
+.car__container--cayan-dark {
+  background-color: var(--cayan-dark);
+}
+
+.car__name {
+  text-transform: uppercase;
+  font-family: var(--font-family-heading);
+  font-size: 4rem;
+  color: var(--gray-light);
+}
+
+.car__description {
+  color: var(--white-transparent);
+  line-height: 2.5rem;
+  flex: 1;
+}
+
+.button {
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  background-color: var(--gray-light);
+  border: 0.25rem solid var(--gray-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.car__container--orange .button {
+  color: var(--orange-light);
+}
+.car__container--cayan .button {
+  color: var(--cayan);
+}
+.car__container--cayan-dark .button {
+  color: var(--cayan-dark);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--gray-light);
+}
+
+.button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 10rem auto 0;
+  }
+}

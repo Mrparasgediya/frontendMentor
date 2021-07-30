@@ -1,0 +1,8 @@
+const dragAndDropActionsTypes = {
+  SET_ITEM_TO_MOVE: "SET_ITEM_TO_MOVE",
+  SET_ON_DROPPED_ITEM: "SET_ON_DROPPED_ITEM",
+  SET_ITEM_IS_DROPPED: "SET_ITEM_IS_DROPPED",
+  RESET_DRAG_AND_DROP: "RESET_DRAG_AND_DROP",
+};
+
+export default dragAndDropActionsTypes;

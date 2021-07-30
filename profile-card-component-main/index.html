@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="container__top-img"
+        src="./assets/images/bg-pattern-top.svg"
+        alt="bg-top-circle"
+      />
+      <img
+        class="container__bottom-img"
+        src="./assets/images/bg-pattern-bottom.svg"
+        alt="bg-bottom-circle"
+      />
+
+      <div class="profile">
+        <img
+          src="./assets/images/bg-pattern-card.svg"
+          alt=""
+          class="profile__bg"
+        />
+
+        <div class="profile__user">
+          <img
+            class="profile__user-image"
+            src="./assets/images/image-victor.jpg"
+            alt=""
+          />
+
+          <div class="profile__user-info">
+            <span class="profile__user-info__name">Victor Crest</span>
+            <span class="profile__user-info__age">26</span>
+            <div class="profile__user-info__location">London</div>
+          </div>
+        </div>
+        <div class="profile__user-stats">
+          <div class="profile__user-stat">
+            80K <span class="profile__user-stat-name">Followers</span>
+          </div>
+          <div class="profile__user-stat">
+            803K <span class="profile__user-stat-name">Likes</span>
+          </div>
+          <div class="profile__user-stat">
+            1.4K <span class="profile__user-stat-name">Photos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
