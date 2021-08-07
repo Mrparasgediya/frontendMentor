@@ -3,9 +3,10 @@ import { boxShadow } from "assets/styles/utilities";
 
 export const DropDownList = styled.ul`
   border-radius: 5px;
-  background: white;
+  background-color: ${({ theme }) => theme.colors.elements.bg};
+
   margin-top: 0.4rem;
-  ${boxShadow.default};
+  ${({ theme }) => boxShadow.default(theme)};
   list-style: none;
   padding: 2rem 2.4rem;
 `;

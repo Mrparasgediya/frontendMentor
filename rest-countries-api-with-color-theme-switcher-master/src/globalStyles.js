@@ -1,4 +1,3 @@
-import colors from "assets/styles/colors";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
@@ -20,7 +19,9 @@ const GlobalStyles = createGlobalStyle`
     padding-top: 8rem;
     font-size: ${(props) => (props.isHomePage ? "1.4rem" : "1.6rem")};
     font-family: "Nunito Sans", sans-serif;
-    background-color: ${colors.gray.veryLight};
+    background-color: ${({ theme }) => theme.colors.body.bg};
+    color: ${({ theme }) => theme.colors.body.text};
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
   }
 
   @media(max-width:768px) {

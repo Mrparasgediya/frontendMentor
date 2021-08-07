@@ -34,7 +34,8 @@ export const container = {
 };
 
 export const boxShadow = {
-  default: "box-shadow: 0px 2px 1rem 0px rgba(133, 133, 133, 0.15)",
+  default: (theme) =>
+    `box-shadow: 0px 2px 1rem 0px  ${theme.colors.elements.shadow} `,
 };
 
 export const borderRadius = {

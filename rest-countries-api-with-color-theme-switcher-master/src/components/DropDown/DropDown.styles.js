@@ -2,7 +2,7 @@ import { boxShadow, display, flex } from "assets/styles/utilities";
 import { ReactComponent as IconArrowDown } from "assets/icons/arrow-down.svg";
 import { ReactComponent as IconArrowUp } from "assets/icons/arrow-up.svg";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const DropDown = styled.div`
   height: 5.6rem;
@@ -19,20 +19,24 @@ export const DropDownSelectedOption = styled.div`
   padding: 2rem 2.4rem;
   height: 100%;
   width: 100%;
-  background: white;
+  background-color: ${({ theme }) => theme.colors.elements.bg};
   border-radius: 5px;
   cursor: pointer;
-  ${boxShadow.default};
+  ${({ theme }) => boxShadow.default(theme)};
+`;
+
+const defaultIconsStyles = css`
+  height: 1.4rem;
+  width: 1.4rem;
+  fill: ${({ theme }) => theme.colors.body.text};
 `;
 
 export const ArrowDownIcon = styled(IconArrowDown)`
-  height: 1.2rem;
-  width: 1.2rem;
+  ${defaultIconsStyles}
 `;
 
 export const ArrowUpIcon = styled(IconArrowUp)`
-  height: 1.2rem;
-  width: 1.2rem;
+  ${defaultIconsStyles}
 `;
 export const CurrentRegionText = styled.span`
   text-transform: capitalize;

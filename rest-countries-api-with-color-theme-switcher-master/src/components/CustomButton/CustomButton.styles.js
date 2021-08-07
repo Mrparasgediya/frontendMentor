@@ -4,8 +4,9 @@ import styled from "styled-components";
 export const CustomButton = styled.button`
   height: 4rem;
   width: 13.8rem;
-  background: white;
-  ${boxShadow.default};
+  background-color: ${({ theme }) => theme.colors.elements.bg};
+  color: ${({ theme }) => theme.colors.body.text};
+  ${({ theme }) => boxShadow.default(theme)};
   ${display.flex};
   ${flex.items.center};
   ${flex.justify.center};

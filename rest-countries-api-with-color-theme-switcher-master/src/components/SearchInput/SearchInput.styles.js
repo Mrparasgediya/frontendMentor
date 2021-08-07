@@ -13,11 +13,11 @@ export const SearchInput = styled.div`
   width: 48rem;
   max-width: 100%;
   padding: 0 3rem;
-  background-color: ${colors.white};
+  background-color: ${({ theme }) => theme.colors.elements.bg};
   ${display.flex};
   ${flex.items.center};
   ${borderRadius.default};
-  ${boxShadow.default};
+  ${({ theme }) => boxShadow.default(theme)};
   gap: 2.4rem;
 `;
 
@@ -47,6 +47,6 @@ export const Input = styled.input`
   &::placeholder {
     font-size: inherit;
     font-family: inherit;
-    color: ${colors.gray.dark};
+    color: ${({ theme }) => theme.colors.body.text};
   }
 `;

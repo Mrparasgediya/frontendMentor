@@ -3,8 +3,8 @@ import { boxShadow, container, display, flex } from "assets/styles/utilities";
 
 export const Header = styled.header`
   height: 8rem;
-  background-color: white;
-  ${boxShadow.default};
+  background-color: ${({ theme }) => theme.colors.elements.bg};
+  ${({ theme }) => boxShadow.default(theme)};
   position: fixed;
   top: 0;
   left: 0;
@@ -35,6 +35,7 @@ export const ChangeThemeContainer = styled.div`
   ${display.flex};
   ${flex.items.center};
   gap: 1rem;
+  cursor: pointer;
 `;
 
 export const ChangeThemeText = styled.span`

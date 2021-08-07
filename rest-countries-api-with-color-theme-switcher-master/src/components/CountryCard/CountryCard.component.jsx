@@ -3,6 +3,7 @@ import * as S from "./CountryCard.styles";
 import { getConvertedPopulation } from "utils/country";
 import { useHistory } from "react-router-dom";
 import CountryInfoList from "components/CountryInfoList/CountryInfoList";
+import LazyImage from "components/LazyImage/LazyImage";
 
 function CountryCard({ country }) {
   const history = useHistory();
@@ -17,7 +18,7 @@ function CountryCard({ country }) {
 
   return (
     <S.CountryCard onClick={() => history.push(`/countries/${name}`)}>
-      <S.CountryFlag src={flag} />
+      <LazyImage src={flag} alt={`${name}-flag`} />
       <S.CountryDataContainer>
         <S.CountryName>{name}</S.CountryName>
         <CountryInfoList infoList={infoList} />

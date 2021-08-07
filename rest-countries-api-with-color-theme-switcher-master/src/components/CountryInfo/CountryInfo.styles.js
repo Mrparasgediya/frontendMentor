@@ -46,11 +46,13 @@ export const CountryListItem = styled.li`
   padding: 0 1rem;
   cursor: pointer;
   border-radius: 5px;
-  background: white;
+  color: ${({ theme }) => theme.colors.body.text};
+  background-color: ${({ theme }) => theme.colors.elements.bg};
+
   ${display.flex};
   ${flex.items.center};
   ${flex.justify.center};
-  ${boxShadow.default};
+  ${({ theme }) => boxShadow.default(theme)};
   transition: transform 0.3s ease-in-out;
 
   &:hover {

@@ -17,6 +17,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const IconArrowBack = styled(ArrowBackIcon)`
+  fill: ${({ theme }) => theme.colors.body.text};
   transform: rotate(180deg);
 `;
 

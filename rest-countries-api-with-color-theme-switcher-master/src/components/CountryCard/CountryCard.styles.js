@@ -1,4 +1,3 @@
-import colors from "assets/styles/colors";
 import {
   borderRadius,
   boxShadow,
@@ -12,9 +11,9 @@ export const CountryCard = styled.div`
   overflow: hidden;
   padding-bottom: 1.8rem;
   min-height: 33.6rem;
-  background-color: ${colors.white};
+  background-color: ${({ theme }) => theme.colors.elements.bg};
   ${borderRadius.default};
-  ${boxShadow.default};
+  ${({ theme }) => boxShadow.default(theme)};
   ${display.flex};
   ${flex.direction.col};
   cursor: pointer;
@@ -26,17 +25,6 @@ export const CountryCard = styled.div`
   @media (max-width: 768px) {
     width: 78%;
     min-height: 42rem;
-  }
-`;
-
-export const CountryFlag = styled.img`
-  width: 100%;
-  height: 16rem;
-  object-fit: cover;
-  object-position: center;
-
-  @media (max-width: 768px) {
-    height: 20.25rem;
   }
 `;
 

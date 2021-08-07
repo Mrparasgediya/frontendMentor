@@ -1,8 +1,13 @@
 import React from "react";
 import CountryProvider from "./country/country.context";
+import ThemeProvider from "./theme/theme.context";
 
 function Provider({ children }) {
-  return <CountryProvider>{children}</CountryProvider>;
+  return (
+    <ThemeProvider>
+      <CountryProvider>{children}</CountryProvider>
+    </ThemeProvider>
+  );
 }
 
 export default Provider;
