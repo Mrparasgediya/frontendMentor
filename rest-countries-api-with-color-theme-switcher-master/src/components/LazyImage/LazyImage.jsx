@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as S from "./LazyImage.styles";
+import LoadingImage from "assets/images/loading.jpg";
 
 function LazyImage({ src, alt }) {
   const imageRef = useRef();
@@ -25,7 +26,7 @@ function LazyImage({ src, alt }) {
     };
   }, [src]);
 
-  return <S.LazyImage ref={imageRef} src={""} alt={alt} loading="lazy" />;
+  return <S.LazyImage ref={imageRef} src={LoadingImage} alt={alt} />;
 }
 
 export default LazyImage;
