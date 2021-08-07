@@ -21,14 +21,28 @@ function splitStrToArr(name, arr, charLength) {
   return splitStrToArr(name.substring(0, name.length - 2), arr, charLength);
 }
 
-export function getRegionsFromCountires(countries) {
-  return countries
-    .reduce(
-      (regions, country) =>
-        regions.includes(country.region)
-          ? regions
-          : [...regions, country.region],
-      []
-    )
-    .filter((region) => !!region);
-}
+export const getBorderCountryFromCountries = async (borders, countries) => {
+  const borderCountries = [];
+  for (let countryCode of borders) {
+    const foundCountry = countries[countryCode];
+    if (foundCountry && "name" in foundCountry) {
+      borderCountries.push(foundCountry.name);
+    } else {
+      const res = await fetch(
+        `https://restcountries.eu/rest/v2/alpha/${countryCode}?fields=name`
+      );
+      const borderCountryData = await res.json();
+      if ("name" in borderCountryData) {
+        borderCountries.push(borderCountryData.name);
+      }
+    }
+  }
+  return borderCountries;
+};
+
+export const searchCountryByName = (name, countries, countriesKeys) => {
+  const foundCountriesKeys = countriesKeys.filter((countryKey) =>
+    countries[countryKey].name.toLowerCase().includes(name)
+  );
+  return foundCountriesKeys;
+};

@@ -1,12 +1,20 @@
 import CountryCard from "components/CountryCard/CountryCard.component";
-import React from "react";
+import { CountryContext } from "contexts/country/country.context";
+import React, { useContext } from "react";
 import * as S from "./Countries.styles";
 
-function Countries({ countries }) {
+function Countries() {
+  const {
+    countryState: { currentCountries, countries },
+  } = useContext(CountryContext);
+
   return (
     <S.CounriesContainer>
-      {countries.map((country, idx) => (
-        <CountryCard key={idx} country={country}></CountryCard>
+      {currentCountries.map((countryCode, idx) => (
+        <CountryCard
+          key={idx}
+          country={{ code: countryCode, ...countries[countryCode] }}
+        ></CountryCard>
       ))}
     </S.CounriesContainer>
   );

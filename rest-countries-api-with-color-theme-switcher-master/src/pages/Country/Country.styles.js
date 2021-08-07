@@ -1,4 +1,4 @@
-import { boxShadow, container, display, flex } from "assets/styles/utilities";
+import { container, display, flex } from "assets/styles/utilities";
 import styled from "styled-components";
 import { ReactComponent as ArrowBackIcon } from "assets/icons/arrow-forward.svg";
 
@@ -20,28 +20,6 @@ export const IconArrowBack = styled(ArrowBackIcon)`
   transform: rotate(180deg);
 `;
 
-export const Button = styled.button`
-  height: 4rem;
-  width: 13.8rem;
-  background: white;
-  ${boxShadow.default};
-  ${display.flex};
-  ${flex.items.center};
-  ${flex.justify.center};
-  gap: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-  &:focus {
-    outline: none;
-  }
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-`;
-
 export const CountryImage = styled.img`
   height: 40rem;
   width: 56rem;
@@ -60,32 +38,10 @@ export const CountryContainer = styled.div`
   }
 `;
 
-export const CountryDetailsContainer = styled.div``;
-export const CountryName = styled.h2`
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-top: 5rem;
-
-  @media (max-width: 768px) {
-    margin-top: 6rem;
-  }
-`;
-
-export const CountryInfoMainContainer = styled.div`
+export const CountryStatusText = styled.div`
+  min-height: 30vh;
+  font-weight: 600;
   ${display.flex};
-  gap: 14.4rem;
-  margin: 3.8rem 0;
-  @media (max-width: 768px) {
-    margin: 4rem 0;
-    ${flex.direction.col};
-    gap: 6.5rem;
-  }
+  ${flex.items.center};
+  ${flex.justify.center};
 `;
-
-export const CountryInfoContainer = styled.div``;
-export const BorderCountriesContainer = styled.div`
-  margin: 3.8rem 0;
-`;
-export const BorderCountriesHeading = styled.div``;
-export const BorderCountriesList = styled.ul``;
-export const BorderCountriesListItem = styled.li``;

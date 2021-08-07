@@ -7,7 +7,6 @@ import CountryInfoList from "components/CountryInfoList/CountryInfoList";
 function CountryCard({ country }) {
   const history = useHistory();
   const { flag, name } = country;
-
   const infoList = ["population", "capital", "region"].map((heading) => ({
     heading,
     text:

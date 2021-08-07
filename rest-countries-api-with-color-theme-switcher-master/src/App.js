@@ -2,12 +2,24 @@ import { Switch, Route } from "react-router-dom";
 import GlobalStyles from "./globalStyles";
 import Home from "pages/Home/Home.page";
 import { useHistory } from "react-router-dom";
-import { Fragment } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import Header from "components/Header/Header.component";
 import Country from "pages/Country/Country";
+import { CountryContext } from "contexts/country/country.context";
+import useCountries from "hooks/useCountries";
 
 function App() {
   const history = useHistory();
+
+  const {
+    countryActions: { setCountries },
+  } = useContext(CountryContext);
+
+  const countries = useCountries();
+
+  useEffect(() => {
+    setCountries(countries);
+  }, [countries]);
 
   return (
     <Fragment>

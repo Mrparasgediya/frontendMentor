@@ -11,8 +11,8 @@ export const DropDownList = styled.ul`
 `;
 
 export const DropDownListItem = styled.li`
-  text-transform: capitalize;
   cursor: pointer;
+  text-transform: capitalize;
 
   &:not(:last-child) {
     margin-bottom: 0.8rem;

@@ -3,11 +3,11 @@ import SearchInput from "components/SearchInput/SearchInput.component";
 import React from "react";
 import * as S from "./SearchAndDropDownPanel.styles";
 
-function SearchAndDropDownPanel({ countries }) {
+function SearchAndDropDownPanel() {
   return (
     <S.SearchAndDropDownPanelContainer>
       <SearchInput />
-      <DropDown countries={countries} />
+      <DropDown />
     </S.SearchAndDropDownPanelContainer>
   );
 }

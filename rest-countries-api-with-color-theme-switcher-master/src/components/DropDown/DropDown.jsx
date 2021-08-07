@@ -1,26 +1,28 @@
-import React, { useState } from "react";
-import { getRegionsFromCountires } from "utils/country";
+import { CountryContext } from "contexts/country/country.context";
+import React, { useContext } from "react";
 import * as S from "./DropDown.styles";
 import DropDownList from "./DropDownList/DropDownList";
 
-function DropDown({ countries }) {
-  const [toggleList, setToggleList] = useState(false);
-  const [selectedRegion, setSelectedRegion] = useState("all");
-  const regions = ["all", ...getRegionsFromCountires(countries)];
+function DropDown() {
+  const {
+    countryState: { regions, currentRegion, showDropDown },
+    countryActions: { setCurrentRegion, toggleShowDropDown },
+  } = useContext(CountryContext);
+
   return (
     <S.DropDown>
-      <S.DropDownSelectedOption onClick={() => setToggleList(!toggleList)}>
-        <span>
-          {selectedRegion === "all" ? "Filter by Region" : selectedRegion}
-        </span>
-        {toggleList ? <S.ArrowUpIcon /> : <S.ArrowDownIcon />}{" "}
+      <S.DropDownSelectedOption onClick={toggleShowDropDown}>
+        <S.CurrentRegionText>
+          {currentRegion === "all" ? "Filter by Region" : currentRegion}
+        </S.CurrentRegionText>
+        {showDropDown ? <S.ArrowUpIcon /> : <S.ArrowDownIcon />}
       </S.DropDownSelectedOption>
-      {toggleList && (
+      {showDropDown && (
         <DropDownList
           options={regions}
           handleOptionClick={(selectedRegion) => {
-            setSelectedRegion(selectedRegion);
-            setToggleList(false);
+            setCurrentRegion(selectedRegion.toLowerCase());
+            toggleShowDropDown();
           }}
         />
       )}

@@ -1,6 +1,6 @@
 import { boxShadow, display, flex } from "assets/styles/utilities";
 import { ReactComponent as IconArrowDown } from "assets/icons/arrow-down.svg";
-import { ReactComponent as IconArrowUp } from "assets/icons/arrow-down.svg";
+import { ReactComponent as IconArrowUp } from "assets/icons/arrow-up.svg";
 
 import styled from "styled-components";
 
@@ -33,4 +33,7 @@ export const ArrowDownIcon = styled(IconArrowDown)`
 export const ArrowUpIcon = styled(IconArrowUp)`
   height: 1.2rem;
   width: 1.2rem;
+`;
+export const CurrentRegionText = styled.span`
+  text-transform: capitalize;
 `;
