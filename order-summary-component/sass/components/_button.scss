@@ -1,0 +1,22 @@
+.button {
+  border: 1px solid blue;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.6rem 0;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+
+  &--blue {
+    background-color: get-blue-shade("bright");
+    color: white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 10px 20px 5px rgba(get-blue-shade("bright"), 0.3);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

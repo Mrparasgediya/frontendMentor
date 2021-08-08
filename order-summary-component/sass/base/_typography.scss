@@ -1,0 +1,20 @@
+:is(h1, h2, h3, h4, h5) {
+  color: get-blue-shade("dark");
+}
+.heading__primary {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .heading__primary {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
+.paragraph {
+  color: get-blue-shade("desaturated");
+  text-align: center;
+  font-weight: 500;
+}

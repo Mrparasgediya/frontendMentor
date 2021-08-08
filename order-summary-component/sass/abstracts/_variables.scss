@@ -1,0 +1,17 @@
+$colors: (
+  "white": #fff,
+  "black": #000,
+  "blue": (
+    "pale": hsl(225, 100%, 94%),
+    "bright": hsl(245, 75%, 52%),
+    "pale-light": hsl(225, 100%, 98%),
+    "desaturated": hsl(224, 23%, 55%),
+    "dark": hsl(223, 47%, 23%),
+  ),
+);
+
+// "pale": "hsl(225, 100%, 94%)",
+// "bright": "hsl(245, 75%, 52%)",
+// "very-pale": "hsl(225, 100%, 98%)",
+// "desaturated": "hsl(224, 23%, 55%)",
+// "dark": "hsl(223, 47%, 23%)",

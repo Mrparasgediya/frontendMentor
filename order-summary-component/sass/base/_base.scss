@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.55%;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background-color: get-blue-shade("pale");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}

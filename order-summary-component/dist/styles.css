@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.55%; }
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background-color: #e0e8ff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; } }
+
+:is(h1, h2, h3, h4, h5) {
+  color: #1f2f56; }
+
+.heading__primary {
+  font-size: 3rem;
+  font-weight: 900; }
+
+@media (max-width: 768px) {
+  .heading__primary {
+    font-size: 2rem;
+    font-weight: 900; } }
+
+.paragraph {
+  color: #7280a7;
+  text-align: center;
+  font-weight: 500; }
+
+.background-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 50vh;
+  background-image: url("/images/pattern-background-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+@media (max-width: 768px) {
+  .background-image {
+    height: 30vh;
+    background-image: url("/images/pattern-background-mobile.svg"); } }
+
+.card {
+  width: 45rem;
+  height: 70rem;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px 5px rgba(114, 128, 167, 0.15); }
+  .card__image {
+    height: 22rem;
+    width: 100%;
+    object-fit: cover; }
+  .card__container {
+    width: 100%;
+    flex: 1;
+    padding: 5.4rem 4.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem; }
+  .card__cancel {
+    text-decoration: none;
+    color: #7280a7;
+    font-weight: 700; }
+
+@media (max-width: 768px) {
+  .card {
+    width: 85%; }
+    .card__image {
+      height: 20rem; }
+    .card__container {
+      padding: 4.75rem 3rem;
+      gap: 3.5rem; } }
+
+.plan {
+  padding: 2.4rem;
+  width: 100%;
+  background-color: #f5f7ff;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 10px; }
+  .plan__container {
+    flex: 1;
+    font-size: 1.6rem; }
+  .plan__heading {
+    font-weight: 900; }
+  .plan__price {
+    color: #7280a7; }
+  .plan__link {
+    color: #3829e0;
+    font-weight: 700; }
+
+.button {
+  border: 1px solid blue;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.6rem 0;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer; }
+  .button:focus {
+    outline: none; }
+  .button--blue {
+    background-color: #3829e0;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 10px 20px 5px rgba(56, 41, 224, 0.3); }
+    .button--blue:hover {
+      opacity: 0.8; }
