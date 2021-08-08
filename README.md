@@ -47,4 +47,10 @@
         <em>watch now</em>
     </a>
     </li>
+     <li>
+    Order summary component
+    <a href="https://fem-order-summary-component.netlify.app/">
+        <em>watch now</em>
+    </a>
+    </li>
 </ol>
