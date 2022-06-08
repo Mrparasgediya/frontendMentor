@@ -30,7 +30,6 @@ const mapLocationIcon = L.icon({
 });
 
 // api variables
-const geoIpifyAPIKey = "at_BWdriHh9SMhm6wPVlVR7RG9UewDQ1";
 const geoIpifyBaseUrl = "https://geo.ipify.org/api/v2/country,city";
 
 // check ip is valid or not
@@ -60,7 +59,6 @@ const setDataFromRes = (res) => {
     isp,
     location: { city, country, postalCode, timezone, lat, lng },
   } = res;
-  console.log(res);
   // set ip details to dom
   ipAddress.textContent = ip;
   ipISP.textContent = isp;
