@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="../images/favicon-32x32.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,13 +18,17 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | IP Address Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <script src="./leaflet/leaflet.js" defer></script>
+    <script src="./src/script.js" defer></script>
   </head>
   <body>
     <header id="header">
       <h1 class="heading heading__1 heading--white">IP Address Tracker</h1>
-      <form action="#" class="search__form">
+      <form class="search__form" id="searchForm">
         <input
+          id="searchInput"
           type="text"
           placeholder="Search for any IP address or domain"
           class="search__input"
@@ -33,7 +37,7 @@
           <svg class="icon__arrow">
             <use
               class="icon icon--black"
-              xlink:href="./images/defs.svg#icon-arrow"
+              xlink:href="../images/defs.svg#icon-arrow"
             />
           </svg>
         </button>
@@ -41,23 +45,23 @@
       <div class="ip__container">
         <div class="ip-item">
           <h4 class="heading heading__4 ip-item__heading">ip address</h4>
-          <p class="ip-item__content">192.212.174.101</p>
+          <p id="ipAddress" class="ip-item__content">192.212.174.101</p>
         </div>
         <div class="ip-item">
           <h4 class="heading heading__4 ip-item__heading">location</h4>
-          <p class="ip-item__content">Brooklyn, NY 10001</p>
+          <p id="ipLocation" class="ip-item__content">Brooklyn, NY 10001</p>
         </div>
         <div class="ip-item">
           <h4 class="heading heading__4 ip-item__heading">timezone</h4>
-          <p class="ip-item__content">UTC-05:00</p>
+          <p id="ipTimezone" class="ip-item__content">UTC-05:00</p>
         </div>
         <div class="ip-item">
           <h4 class="heading heading__4 ip-item__heading">isp</h4>
-          <p class="ip-item__content">SpaceX Starlink</p>
+          <p id="ipISP" class="ip-item__content">SpaceX Starlink</p>
         </div>
       </div>
     </header>
-    <section id="map"></section>
+    <div id="map"></div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
