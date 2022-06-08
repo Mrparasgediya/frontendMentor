@@ -177,3 +177,49 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media only screen and (max-width: 768px) {
+  .html {
+    font-size: 8px;
+  }
+  #header .heading__1 {
+    font-size: 2.4rem;
+  }
+  .heading__4 {
+    font-size: 1rem;
+  }
+  .search__form {
+    width: 80%;
+  }
+  .search__input {
+    font-size: 1.6rem;
+  }
+  .search__input::placeholder {
+    font-size: 1.4rem;
+  }
+  .ip__container {
+    bottom: -8%;
+    flex-direction: column;
+    height: min-content;
+    transform: translate(-50%, 50%);
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    width: 80%;
+  }
+  .ip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 0.6rem;
+  }
+
+  .ip-item:not(:last-child)::after {
+    content: none;
+  }
+  .ip-item__content {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

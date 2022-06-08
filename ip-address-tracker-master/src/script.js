@@ -30,6 +30,7 @@ const mapLocationIcon = L.icon({
 });
 
 // api variables
+const geoIpifyAPIKey = "at_BWdriHh9SMhm6wPVlVR7RG9UewDQ1";
 const geoIpifyBaseUrl = "https://geo.ipify.org/api/v2/country,city";
 
 // check ip is valid or not
