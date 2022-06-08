@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <h1 class="heading heading__1 heading--white">IP Address Tracker</h1>
+      <form action="#" class="search__form">
+        <input
+          type="text"
+          placeholder="Search for any IP address or domain"
+          class="search__input"
+        />
+        <button class="button button--black search__button">
+          <svg class="icon__arrow">
+            <use
+              class="icon icon--black"
+              xlink:href="./images/defs.svg#icon-arrow"
+            />
+          </svg>
+        </button>
+      </form>
+      <div class="ip__container">
+        <div class="ip-item">
+          <h4 class="heading heading__4 ip-item__heading">ip address</h4>
+          <p class="ip-item__content">192.212.174.101</p>
+        </div>
+        <div class="ip-item">
+          <h4 class="heading heading__4 ip-item__heading">location</h4>
+          <p class="ip-item__content">Brooklyn, NY 10001</p>
+        </div>
+        <div class="ip-item">
+          <h4 class="heading heading__4 ip-item__heading">timezone</h4>
+          <p class="ip-item__content">UTC-05:00</p>
+        </div>
+        <div class="ip-item">
+          <h4 class="heading heading__4 ip-item__heading">isp</h4>
+          <p class="ip-item__content">SpaceX Starlink</p>
+        </div>
+      </div>
+    </header>
+    <section id="map"></section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        target="_blank"
+        href="https://github.com/Mrparasgediya/frontendMentor/tree/ip-address-master/ip-address-tracker-master"
+        >Paras Gediya</a
+      >.
+    </div>
+  </body>
 </html>
