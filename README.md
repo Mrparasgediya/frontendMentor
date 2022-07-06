@@ -47,9 +47,15 @@
         <em>watch now</em>
     </a>
     </li>
-     <li>
+    <li>
     Order summary component
     <a href="https://fem-order-summary-component.netlify.app/">
+        <em>watch now</em>
+    </a>
+    </li>
+    <li>
+    IP Address Tracker
+    <a href="https://fem-ip-address-tracker-master.netlify.app/">
         <em>watch now</em>
     </a>
     </li>
