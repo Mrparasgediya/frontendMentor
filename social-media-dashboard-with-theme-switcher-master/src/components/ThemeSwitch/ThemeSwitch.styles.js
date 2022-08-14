@@ -43,7 +43,8 @@ export const ThemeSwitchBall = styled.div`
   right: 0.4rem;
   z-index: 0;
   top: 50%;
-  transform: translateY(-50%) ${(props) => props.isOn && "translateX(-125%)"};
+  left: 7%;
+  transform: translateY(-50%) ${(props) => props.isOn && "translateX(134%)"};
   height: 1.8rem;
   width: 1.8rem;
   border-radius: 50%;
